@@ -4,9 +4,9 @@
  <div class="container">
    <h1>Login to continue</h1>
    <ol>
-      <input type="text" placeholder="username" name="username" class="a" required>
-      <input type="text" placeholder="password" name="password" class="a" required>
-      <button type="submit" class="b" name="login">Login</button>
+      <input type="text" placeholder="username" name="userName" class="a" required>
+      <input type="password" placeholder="password" name="password" class="a" required>
+      <button type="submit" class="b" name="login" @click="logIn">Login</button>
    </ol>
  </div>
  </div>
@@ -14,10 +14,33 @@
 
 <script>
 import navbar from '../components/navbar.vue'
+import axios from 'axios'
 export default {
   name: 'login',
+  data () {
+    return {
+      userName: '',
+      password: ''
+    }
+  },
   components: {
     navbar: navbar
+  },
+  methods:
+  {
+    logIn () {
+      const body = {
+        userName: this.userName,
+        password: this.password
+      }
+      axios.post('http://localhost:8082/login', body)
+        .then(response => {
+          console.log(response)
+          this.$router.push('/')
+        }).catch(response => console.log(response))
+      this.userName = ''
+      this.password = ''
+    }
   }
 }
 </script>
@@ -33,7 +56,6 @@ export default {
   margin-left: auto;
   margin-top: 20px;
   margin-right:auto;
-  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   justify-content: center;

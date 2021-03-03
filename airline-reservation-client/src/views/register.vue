@@ -2,16 +2,14 @@
 <div><navbar/>
 <div class="wrapper">
  <div class="container">
-   <form @submit="clicked">
      <h1>Register to book the ticket.</h1>
       <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
       <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
-      <input type="text" v-model="password" placeholder="Password" name="password" class="a" required>
+      <input type="password" v-model="password" placeholder="Password" name="password" class="a" required>
       <input type="text" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required>
       <input type="email" v-model="email" placeholder="Email" name="email" class="a" required>
       <input type="text" pattern="[0-9]{10}" v-model="mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="a" required>
-      <button type="submit" class="b" name="register">Register Now</button>
-   </form>
+      <button type="submit" class="b" name="register" @click="clicked">Register Now</button>
  </div>
 </div>
 </div>
