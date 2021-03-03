@@ -1,4 +1,4 @@
-# airline-reservation-client
+# flight_booking
 
 ## Project setup
 ```

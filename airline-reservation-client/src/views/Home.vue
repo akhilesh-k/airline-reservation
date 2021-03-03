@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div >
+<navbar />
+<div class="wrapper">
+    <h1>Book Cheapest Flights to anywhere!</h1>
+    <bookingcard class="booking-card"/>
+</div>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import navbar from '@/components/navbar.vue'
+import bookingcard from '@/components/bookingcard.vue'
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    navbar: navbar,
+    bookingcard: bookingcard
   }
 }
 </script>
+
+<style>
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  margin-top: 50px;
+  color:#7868e6
+}
+.booking-card{
+  align-items: center;
+  margin: 10px;
+  padding: 30px;
+}
+</style>
