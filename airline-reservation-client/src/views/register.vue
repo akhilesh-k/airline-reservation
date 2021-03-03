@@ -2,15 +2,16 @@
 <div><navbar/>
 <div class="wrapper">
  <div class="container">
-   <div>
+   <form @submit="clicked">
      <h1>Register to book the ticket.</h1>
       <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
       <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
       <input type="text" v-model="password" placeholder="Password" name="password" class="a" required>
-      <input type="text" v-model="email" placeholder="Email" name="email" class="a" required>
-      <input type="text" v-model="mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="a" required>
-      <button @click="clicked" type="submit" class="b" name="register">Register Now</button>
-   </div>
+      <input type="text" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required>
+      <input type="email" v-model="email" placeholder="Email" name="email" class="a" required>
+      <input type="text" pattern="[0-9]{10}" v-model="mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="a" required>
+      <button type="submit" class="b" name="register">Register Now</button>
+   </form>
  </div>
 </div>
 </div>
@@ -23,7 +24,7 @@ export default {
   data () {
     return {
       name: '',
-      username: '',
+      userName: '',
       password: '',
       email: '',
       mobileNumber: ''
@@ -42,6 +43,11 @@ export default {
         .then(response => {
           console.log(response)
         })
+      this.userName = ''
+      this.name = ''
+      this.email = ''
+      this.mobileNumber = ''
+      this.password = ''
     }
   },
   components: {
