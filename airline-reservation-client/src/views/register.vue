@@ -6,7 +6,7 @@
       <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
       <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
       <input type="password" v-model="password" placeholder="Password" name="password" class="a" required>
-      <input type="text" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required>
+      <!-- <input type="password" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required> -->
       <input type="email" v-model="email" placeholder="Email" name="email" class="a" required>
       <input type="text" pattern="[0-9]{10}" v-model="mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="a" required>
       <button type="submit" class="b" name="register" @click="clicked">Register Now</button>
@@ -37,7 +37,7 @@ export default {
         mobileNumber: this.mobileNumber,
         password: this.password
       }
-      axios.post('http://localhost:8082/register', body)
+      axios.post('http://10.177.68.55:8080/register', body)
         .then(response => {
           console.log(response)
         })

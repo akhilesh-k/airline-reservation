@@ -33,22 +33,22 @@
  </div>
 </div>
 </template>
- 
+
 <script>
 import navbar from '@/components/navbar.vue'
 export default {
- name: 'Home',
- data: function () {
- return {
- cities: ['Delhi', 'Mumbai', 'Chennai', 'Bengaluru', 'Kolkata', 'Hyderabad']
- }
- },
- components: {
- navbar: navbar
- }
+  name: 'Home',
+  data: function () {
+    return {
+      cities: ['Delhi', 'Mumbai', 'Chennai', 'Bengaluru', 'Kolkata', 'Hyderabad']
+    }
+  },
+  components: {
+    navbar: navbar
+  }
 }
 </script>
- 
+
 <style scoped>
 .card
 {

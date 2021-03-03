@@ -4,8 +4,8 @@
  <div class="container">
    <h1>Login to continue</h1>
    <ol>
-      <input type="text" placeholder="username" name="userName" class="a" required>
-      <input type="password" placeholder="password" name="password" class="a" required>
+      <input type="text" placeholder="username" name="userName" class="a" required v-model="userName">
+      <input type="password" placeholder="password" name="password" class="a" required v-model="password">
       <button type="submit" class="b" name="login" @click="logIn">Login</button>
    </ol>
  </div>
@@ -15,6 +15,7 @@
 <script>
 import navbar from '../components/navbar.vue'
 import axios from 'axios'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'login',
   data () {
@@ -28,19 +29,27 @@ export default {
   },
   methods:
   {
+    ...mapActions(['setLoginAction', 'setUserDataAction']),
     logIn () {
       const body = {
         userName: this.userName,
         password: this.password
       }
-      axios.post('http://localhost:8082/login', body)
+      axios.post('http://10.177.68.55:8080/login', body)
         .then(response => {
           console.log(response)
-          this.$router.push('/')
+          if (response.data.code === 'SUCCESS') {
+            this.setLoginAction('true')
+            this.setUserDataAction(this.userName)
+            this.$router.push('/')
+          } else {
+            alert('Password not matched')
+          }
         }).catch(response => console.log(response))
-      this.userName = ''
-      this.password = ''
     }
+  },
+  computed: {
+    ...mapGetters(['getlogin', 'getUserData'])
   }
 }
 </script>
