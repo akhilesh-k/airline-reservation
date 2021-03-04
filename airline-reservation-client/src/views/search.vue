@@ -64,26 +64,52 @@ export default {
 }
 </script>
 
-<style>
-body{
-  background-color: white;
-}
-.container-search{
-  margin: 0px;
-  padding: 20px;
-  display:flex;
-  flex-direction: column;
-}
-.box{
-  margin:30px;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.flight{
-  background-color: cadetblue;
+<style>.Page-content {
+ padding: 30px;
 }
 
+.headline {
+ font-size: 28px;
+ margin-bottom: 5px;
+}
+
+.subtext {
+ font-size: 24px;
+ margin-bottom: 10px;
+}
+
+table {
+ font-family: arial, sans-serif;
+ border-collapse: collapse;
+ width: 100%;
+ margin-top: 40px;
+ padding: 0px 20px;
+}
+
+td,
+th {
+ /* border: 1px solid #dddddd; */
+ text-align: left;
+ padding: 8px;
+}
+
+th {
+ background: #7868e6;
+ color: #ffffff;
+}
+
+tr:nth-child(odd) {
+ background-color: #edeef7;
+}
+
+button {
+ margin-left: 20px;
+ background: #7868e6;
+ color: #ffffff;
+ width: 80px;
+ height: 30px;
+ border: none;
+ outline: none;
+ cursor: pointer;
+}
 </style>

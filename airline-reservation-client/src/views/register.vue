@@ -71,7 +71,6 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 10px;
-
 }
 .title-container{
   height: 15vh;
