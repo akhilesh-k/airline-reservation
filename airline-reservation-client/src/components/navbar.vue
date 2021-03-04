@@ -1,6 +1,6 @@
 <template>
 <div class="navigation">
-  <p ><router-link to="/">SastaLogo</router-link></p>
+  <p ><router-link to="/">FlightBooking</router-link></p>
  <ul>
  <li class="active"><router-link to="/login">Login</router-link></li>
  <li class="active"><router-link to="/register">Register</router-link></li>
@@ -15,10 +15,13 @@ export default {
 </script>
 
 <style scoped>
-.navigation{
-background-color:#7868e6;
-}
-ul {
+.navigation {
+  background-color: #7868e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+}ul {
  list-style-type: none;
  margin: 0;
  padding: 0;

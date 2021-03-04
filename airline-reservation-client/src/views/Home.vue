@@ -33,7 +33,7 @@
         </div>
         <div class="input-container">
           <input type="date" name="date" placeholder="Date" class="a" style="padding:0px" />
-          <button class="a">Book</button>
+          <button class="a"><router-link to="/search">Book</router-link></button>
         </div>
       </div>
     </div>
@@ -120,5 +120,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     right: 0;
     top: 0;
     width: auto;
+}
+a{
+  color: white;
+  font-weight: 700;
+  text-decoration:none;
 }
 </style>
