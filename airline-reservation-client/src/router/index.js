@@ -5,6 +5,7 @@ import register from '@/views/register.vue'
 import Home from '@/views/Home.vue'
 import search from '@/views/search.vue'
 import checkout from '@/views/checkout.vue'
+import confirmation from '@/views/confirmation.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/checkout',
     name: 'checkout',
     component: checkout
+  },
+  {
+    path: '/confirmation',
+    name: 'confirmation',
+    component: confirmation
   }
 ]
 
