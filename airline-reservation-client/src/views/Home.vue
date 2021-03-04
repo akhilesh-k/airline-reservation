@@ -47,12 +47,12 @@ export default {
   data: function () {
     return {
       cities: [
-        'Delhi',
-        'Mumbai',
-        'Chennai',
-        'Bengaluru',
-        'Kolkata',
-        'Hyderabad'
+        'delhi',
+        'bombay',
+        'chennai',
+        'bangalore',
+        'kolkata',
+        'hyderabad'
       ]
     }
   },
