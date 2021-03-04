@@ -2,8 +2,11 @@
   <div>
     <navbar />
     <div class="Page-content">
-      <div class="headline">{{getSourceAndDestination.source}} to {{getSourceAndDestination.destination}}</div>
-      <div class="subtext">{{date}}</div>
+      <div class="headline">
+        {{ getSourceAndDestination.source }} to
+        {{ getSourceAndDestination.destination }}
+      </div>
+      <div class="subtext">{{ date }}</div>
       <div class="details">
         <table>
           <tr>
@@ -17,14 +20,15 @@
             <th>Price</th>
           </tr>
           <tr v-for="i in info" :key="i.id">
-            <td>{{i.airline}}</td>
-            <td>{{i.fid}}</td>
-            <td>{{i.source}}</td>
-            <td>{{i.destination}}</td>
-            <td>{{i.departure}}</td>
-            <td>{{i.arrival}}</td>
-            <td>{{i.duration}}</td>
-            <td>{{i.price}}
+            <td>{{ i.airline }}</td>
+            <td>{{ i.fid }}</td>
+            <td>{{ i.source }}</td>
+            <td>{{ i.destination }}</td>
+            <td>{{ i.departure }}</td>
+            <td>{{ i.arrival }}</td>
+            <td>{{ i.duration }}</td>
+            <td>
+              {{ i.price }}
               <button>Book</button>
             </td>
           </tr>
@@ -35,32 +39,30 @@
 </template>
 
 <script>
-import axios from 'axios'
-import navbar from '@/components/navbar.vue'
+import axios from "axios";
+import navbar from "@/components/navbar.vue";
 export default {
-  name: 'search',
-  data () {
+  name: "search",
+  data() {
     return {
-      info: ''
-    }
+      info: "",
+    };
   },
-  mounted () {
-    axios
-      .get('http://10.177.68.80:8080/delhi/bombay')
-      .then((response) => {
-        console.log(response)
-        this.info = response.data
-      })
+  mounted() {
+    axios.get("http://10.177.68.80:8080/delhi/bombay").then((response) => {
+      console.log(response);
+      this.info = response.data;
+    });
   },
   components: {
-    navbar
+    navbar,
   },
   computed: {
-    getSourceAndDestination () {
-      return this.info.length ? this.info[0] : { source: '', destination: '' }
-    }
-  }
-}
+    getSourceAndDestination() {
+      return this.info.length ? this.info[0] : { source: "", destination: "" };
+    },
+  },
+};
 </script>
 
 <style>
