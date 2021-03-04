@@ -6,7 +6,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isLogin: false,
-    userData: ''
+    info: '',
+    userData: '',
+    flightId: '',
+    source: '',
+    destination: '',
+    flightClass: ''
   },
   getters: {
     getlogin (state) {
