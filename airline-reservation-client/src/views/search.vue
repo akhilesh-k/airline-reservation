@@ -17,14 +17,15 @@
             <th>Price</th>
           </tr>
           <tr v-for="i in info" :key="i.id">
-            <td>{{i.airline}}</td>
-            <td>{{i.fid}}</td>
-            <td>{{i.source}}</td>
-            <td>{{i.destination}}</td>
-            <td>{{i.departure}}</td>
-            <td>{{i.arrival}}</td>
-            <td>{{i.duration}}</td>
-            <td>{{i.price}}
+            <td>{{ i.airline }}</td>
+            <td>{{ i.fid }}</td>
+            <td>{{ i.source }}</td>
+            <td>{{ i.destination }}</td>
+            <td>{{ i.departure }}</td>
+            <td>{{ i.arrival }}</td>
+            <td>{{ i.duration }}</td>
+            <td>
+              {{ i.price }}
               <button>Book</button>
             </td>
           </tr>
