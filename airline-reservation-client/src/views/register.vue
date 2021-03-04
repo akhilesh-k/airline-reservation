@@ -2,8 +2,8 @@
 <div><navbar/>
 <div class="wrapper">
  <div class="container">
-     <h1>Register to book the ticket.</h1>
-      <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
+ <h1>Register to book the ticket.</h1>
+           <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
       <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
       <input type="password" v-model="password" placeholder="Password" name="password" class="a" required>
       <!-- <input type="password" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required> -->
@@ -64,7 +64,7 @@ export default {
 }
 .container {
   height: 80vh;
-  width: 50vw;
+  width: 40vw;
   background-color: #edeef7;
   display: flex;
   flex-direction: column;
@@ -86,7 +86,7 @@ export default {
 .a {
   width:30vw;
   height:5vh;
-  margin: 30px;
+  margin: 5px;
   display: flex;
   border-radius: 8px;
   border: grey;
@@ -94,7 +94,7 @@ export default {
 .b {
   width:30vw;
   height:5vh;
-  margin: 30px;
+  margin: 20px;
   display: flex;
   border: grey;
   border-radius: 6px;
