@@ -35,7 +35,7 @@ export default {
         userName: this.userName,
         password: this.password
       }
-      axios.post('http://10.177.68.55:8080/login', body)
+      axios.post('http://localhost:8082/login', body)
         .then(response => {
           console.log(response)
           if (response.data.code === 'SUCCESS') {
