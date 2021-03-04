@@ -37,7 +37,7 @@ export default {
         mobileNumber: this.mobileNumber,
         password: this.password
       }
-      axios.post('http://10.177.68.55:8080/loginregister', body)
+      axios.post('http://10.177.68.55:8080/register', body)
         .then(response => {
           console.log(response)
         })
