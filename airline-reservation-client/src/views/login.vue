@@ -58,7 +58,7 @@ export default {
 .body {
  margin:0;
 }
-.container {
+.container{
   height: 100vh;
   width: 100vw;
   margin: 5px solid black;
@@ -68,6 +68,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #7868e6;
 
 }
 .a {
@@ -83,8 +84,8 @@ export default {
   align-items: center;
 
 }
-h1{
+.container h1{
   text-align: center;
-  color: rgb(51, 50, 50);
+  color: #7868e6;
 }
 </style>

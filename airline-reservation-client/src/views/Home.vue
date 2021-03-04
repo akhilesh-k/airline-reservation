@@ -2,7 +2,7 @@
   <div class="wrapper">
     <navbar />
     <div>
-      <h1>Book The Sabse Sasta Flight Ticket</h1>
+      <h1>Book the cheapest Flight Ticket</h1>
       <div class="card">
         <div class="part1">
           <select for="Source" class="a">
