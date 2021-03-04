@@ -1,8 +1,9 @@
+<template>
   <div>
     <navbar />
     <div class="Page-content">
       <div class="headline">{{getSourceAndDestination.source}} to {{getSourceAndDestination.destination}}</div>
-      <div class="subtext">{{date}}</div>
+      <div class="subtext">{{getSourceAndDestination.date}}</div>
       <div class="details">
         <table>
           <tr>
@@ -45,7 +46,7 @@ export default {
   },
   mounted () {
     axios
-      .get('http://10.177.68.80:8080/delhi/bombay')
+      .get('http://10.177.68.80:8080/search/{source}/{destination}')
       .then((response) => {
         console.log(response)
         this.info = response.data
@@ -53,15 +54,11 @@ export default {
   },
   components: {
     navbar
-<<<<<<< HEAD
->>>>>>> 478587e847d3b2fe400ba69c270f809bf728d8ca
-=======
   },
   computed: {
     getSourceAndDestination () {
-      return this.info.length ? this.info[0] : { source: '', destination: '' }
+      return this.info.length ? this.info[0] : { source: '', destination: '', date: '' }
     }
->>>>>>> b9a6cdfc2d6f44f5e78e38a6decde0028c8301e7
   }
 }
 </script>

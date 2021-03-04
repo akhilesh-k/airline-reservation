@@ -4,11 +4,8 @@ import login from '@/views/login.vue'
 import register from '@/views/register.vue'
 import Home from '@/views/Home.vue'
 import search from '@/views/search.vue'
-<<<<<<< HEAD
-=======
 import checkout from '@/views/checkout.vue'
 import confirmation from '@/views/confirmation.vue'
->>>>>>> 478587e847d3b2fe400ba69c270f809bf728d8ca
 
 Vue.use(VueRouter)
 
@@ -32,8 +29,6 @@ const routes = [
     path: '/search',
     name: 'search',
     component: search
-<<<<<<< HEAD
-=======
   },
   {
     path: '/checkout',
@@ -44,7 +39,6 @@ const routes = [
     path: '/confirmation',
     name: 'confirmation',
     component: confirmation
->>>>>>> 478587e847d3b2fe400ba69c270f809bf728d8ca
   }
 ]
 
