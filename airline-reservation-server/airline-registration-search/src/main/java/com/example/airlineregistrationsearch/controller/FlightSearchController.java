@@ -1,24 +1,22 @@
 package com.example.airlineregistrationsearch.controller;
 
+import com.example.airlineregistrationsearch.dto.FlightRequestDTO;
 import com.example.airlineregistrationsearch.dto.FlightResponseDTO;
 import com.example.airlineregistrationsearch.service.FlightSearchService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/")
 public class FlightSearchController {
 	@Autowired
 	private FlightSearchService flightSearchService;
 
-	@GetMapping("/{source}/{destination}")
-	public List<FlightResponseDTO> flightSearch(@PathVariable("source") String source, @PathVariable("destination") String destination) {
-		return flightSearchService.searchFlight(source, destination);
+	@PostMapping("/search")
+	public List<FlightResponseDTO> flightSearch(@RequestBody FlightRequestDTO flightRequestDTO) {
+		return flightSearchService.searchFlight(flightRequestDTO);
 	}
 }
