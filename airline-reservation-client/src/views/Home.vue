@@ -7,7 +7,7 @@
         <div class="part1">
           <select for="Source" class="a">
             <option value="Source" selected>Source</option>
-            <option v-for="city in cities" :key="city.id">{{city}}</option>
+            <option v-for="city in cities" :key="city.id">{{ city }}</option>
           </select>
           <div>
             <div class="r">
@@ -23,7 +23,7 @@
         <div class="part2">
           <select for="Destination" class="a">
             <option value="Destination" selected>Destination</option>
-            <option v-for="city in cities" :key="city.id">{{city}}</option>
+            <option v-for="city in cities" :key="city.id">{{ city }}</option>
           </select>
           <select for="flightClass" class="a">
             <option value="Class" selected>Class</option>
@@ -32,11 +32,20 @@
           </select>
         </div>
         <div class="input-container">
-          <input type="date" name="date" placeholder="Date" class="a" style="padding:0px" />
-          <button class="a"><router-link to="/search">Book</router-link></button>
+          <input
+            type="date"
+            name="date"
+            placeholder="Date"
+            class="a"
+            style="padding: 0px"
+          />
+          <button class="a">
+            <router-link to="/search">Book</router-link>
+          </button>
         </div>
       </div>
     </div>
+    <img class="background-img" src="@/assets/10134.jpg" alt="" srcset="" />
   </div>
 </template>
 
@@ -69,6 +78,7 @@ export default {
   margin: 50px auto;
   max-width: 800px;
   background-color: #edeef7;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
 }
@@ -101,29 +111,40 @@ h1 {
   justify-content: space-between;
   max-width: 60px;
   align-items: center;
+  text-align: center;
 }
 .input-container input {
-    border: none;
-    box-sizing: border-box;
-    outline: 0;
-    padding: .75rem;
-    position: relative;
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0.75rem;
+  position: relative;
+  text-align: center;
+  font-weight: 700;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  text-align: center;
 }
-a{
+a {
   color: white;
   font-weight: 700;
-  text-decoration:none;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+}
+.background-img {
+  max-height: 44%;
+  max-width: 44%;
+  right: 0px;
 }
 </style>
