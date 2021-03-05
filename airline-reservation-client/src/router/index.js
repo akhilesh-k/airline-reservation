@@ -6,6 +6,8 @@ import Home from '@/views/Home.vue'
 import search from '@/views/search.vue'
 import checkout from '@/views/checkout.vue'
 import confirmation from '@/views/confirmation.vue'
+import addflight from '@/views/addflight.vue'
+import bookreport from '@/views/bookreport.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/confirmation',
     name: 'confirmation',
     component: confirmation
+  },
+  {
+    path: '/bookreport',
+    name: 'bookreport',
+    component: bookreport
+  },
+  {
+    path: '/addflight',
+    name: 'addflight',
+    component: addflight
   }
 ]
 
