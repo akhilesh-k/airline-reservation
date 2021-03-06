@@ -13,7 +13,7 @@ public class AddFlightResponseDTO {
     private String airline;
     private String source;
     private String destination;
-    private String arrivalTime;
-    private String departureTime;
+    private String arrival;
+    private String departure;
     private Integer price;
 }

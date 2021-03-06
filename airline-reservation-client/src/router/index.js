@@ -8,6 +8,7 @@ import checkout from '@/views/checkout.vue'
 import confirmation from '@/views/confirmation.vue'
 import addflights from '@/views/addflights.vue'
 import bookreport from '@/views/bookreport.vue'
+import payment from '@/views/payment.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/addflights',
     name: 'addflights',
     component: addflights
+  },
+  {
+    path: '/payment',
+    name: 'payment',
+    component: payment
   }
 ]
 
