@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     isLogin: false,
     info: '',
-    userData: '',
+    userData: {},
     flightId: '',
     source: '',
     destination: '',

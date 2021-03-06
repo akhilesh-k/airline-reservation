@@ -6,19 +6,21 @@ import Home from '@/views/Home.vue'
 import search from '@/views/search.vue'
 import checkout from '@/views/checkout.vue'
 import confirmation from '@/views/confirmation.vue'
-
+import adminLogin from '@/views/adminLogin.vue'
+import details from '@/views/details.vue'
+import history from '@/views/history.vue'
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/login',
     name: 'login',
     component: login
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: Home
   },
   {
     path: '/register',
@@ -31,14 +33,30 @@ const routes = [
     component: search
   },
   {
+    path: '/confirmation',
+    name: 'confirmation',
+    component: confirmation
+  },
+  {
+    path: '/adminLogin',
+    name: 'adminLogin',
+    component: adminLogin
+
+  },
+  {
     path: '/checkout',
     name: 'checkout',
     component: checkout
   },
   {
-    path: '/confirmation',
-    name: 'confirmation',
-    component: confirmation
+    path: '/details',
+    name: 'details',
+    component: details
+  },
+  {
+    path: '/history',
+    name: 'history',
+    component: history
   }
 ]
 

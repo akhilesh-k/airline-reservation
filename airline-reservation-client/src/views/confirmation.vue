@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar />
+    <navabar1 />
     <div class="pay">
       <div class="card">
         <div class="heading">Congratulations!! Ticked Booked</div>
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import navbar from '@/components/navbar.vue'
+import navabar1 from '@/components/navabar1.vue'
 
 export default {
   components: {
-    navbar
+    navabar1: navabar1
   }
 }
 </script>

@@ -1,24 +1,23 @@
 <template>
   <div>
-    <navbar />
+    <navabar1 />
     <div class="pay">
       <div class="heading">Pay now to book the ticket</div>
       <div class="card">
         <div class="content-line">
           <div class="Details">
-            <div class="from-where">BLR --> DEL</div>
-            <div class="timings">Day Month Year</div>
+            <div class="from-where">{{person.source}} --> {{person.destination}}</div>
+            <div class="timings">{{person.departure}}<br>{{person.arrival}}<br>{{person.duration}}<br>{{person.flightId.date}}</div>
           </div>
-          <div class="airline-name">Some Airline</div>
+          <div class="airline-name">{{person.airline}}</div>
         </div>
         <div class="content-line">
           <div class="personal-info">
-            <div class="name">XYZ AADMI</div>
-            <div class="name">xyz@mail.com</div>
+            <div class="name">{{ person.email}}</div>
           </div>
           <div class="pay-button">
-            <div class="pay-amount">6969</div>
-            <button>Pay Now</button>
+            <div class="pay-amount">{{ person.price }}</div>
+            <button @click="paynow">Pay Now</button>
           </div>
         </div>
       </div>
@@ -27,11 +26,21 @@
 </template>
 
 <script>
-import navbar from '@/components/navbar.vue'
+import navabar1 from '@/components/navabar1.vue'
 
 export default {
   components: {
-    navbar
+    navabar1: navabar1
+  },
+  data () {
+    return {
+      person: JSON.parse(localStorage.getItem('item'))
+    }
+  },
+  methods: {
+    paynow () {
+      this.$router.push('/details')
+    }
   }
 }
 </script>

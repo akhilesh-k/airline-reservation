@@ -5,50 +5,49 @@
       <div class="details">
         <table>
           <tr>
-            <th>Airline</th>
-            <th>Flight Number</th>
-            <th>Source</th>
-            <th>Destination</th>
-            <th>Departure</th>
-            <th>Arival</th>
-            <th>Duration</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>FlightName</th>
+            <th>Date</th>
             <th>Price</th>
+            <th>MobileNumber</th>
           </tr>
           <tr v-for="i in info" :key="i.id">
-            <td>{{ i.airline }}</td>
-            <td>{{ i.flightId.fid }}</td>
-            <td>{{ i.source }}</td>
-            <td>{{ i.destination }}</td>
-            <td>{{ i.departure }}</td>
-            <td>{{ i.arrival }}</td>
-            <td>{{ i.duration }}</td>
-            <td>
-              {{ i.price }}
-              <button @click = "book(i)">Book</button>
-            </td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.userName }}</td>
+            <td>{{ i.flightName}}</td>
+            <td>{{ i.date }}</td>
+            <td>{{ i.price }}</td>
+            <td>{{ i.mobileNumber }}</td>
           </tr>
         </table>
       </div>
     </div>
   </div>
 </template>
+
 <script>
-// import axios from 'axios'
+import axios from 'axios'
 import navabar1 from '@/components/navabar1.vue'
 export default {
-  name: 'search',
+  name: 'history',
   data () {
     return {
-      info: JSON.parse(localStorage.getItem('FlightSearch'))
+      info: {}
     }
   },
   components: {
     navabar1: navabar1
   },
-  methods: {
-    book (i) {
-      localStorage.setItem('item', JSON.stringify(i))
-      this.$router.push('/checkout')
+  mounted: {
+    load () {
+      var x = localStorage.getItem('username')
+      axios.get('http://10.177.68.80:9000/booking-details/getHistory/' + x).then((response) => {
+        this.info = response.data
+        console.log(response)
+      }).catch((response) => {
+        console.log(response)
+      })
     }
   }
 }

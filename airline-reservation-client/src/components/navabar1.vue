@@ -2,21 +2,14 @@
 <div class="navigation">
   <p ><router-link to="/home">FlightBooking</router-link></p>
  <ul>
- <li class="active"><router-link to="/">Login</router-link></li>
- <li class="active"><router-link to="/register">Register</router-link></li>
+ <li class="active"><router-link to="/">SignOut</router-link></li>
  </ul>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'navbar',
-  method: {
-    logoutUser () {
-      this.setLoginAction('false')
-      this.$router.push('/login')
-    }
-  }
+  name: 'navbar'
 }
 </script>
 

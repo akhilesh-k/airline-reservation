@@ -3,13 +3,13 @@
 <div class="wrapper">
  <div class="container">
  <h1>Register to book the ticket.</h1>
-           <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
-      <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
-      <input type="password" v-model="password" placeholder="Password" name="password" class="a" required>
-      <!-- <input type="password" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required> -->
-      <input type="email" v-model="email" placeholder="Email" name="email" class="a" required>
-      <input type="text" pattern="[0-9]{10}" v-model="mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="a" required>
-      <button type="submit" class="b" name="register" @click="clicked">Register Now</button>
+ <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
+ <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
+ <input type="password" v-model="password" placeholder="Password" name="password" class="a" required>
+ <input type="password" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required>
+ <input type="email" v-model="email" placeholder="Email" name="email" class="a" required>
+ <input type="text" pattern="[0-9]{10}" v-model="mobileNumber" placeholder="Mobile Number" name="mobileNumber" class="a" required>
+ <button type="submit" class="b" name="register" @click="clicked">Register Now</button>
  </div>
 </div>
 </div>
@@ -25,10 +25,37 @@ export default {
       userName: '',
       password: '',
       email: '',
-      mobileNumber: ''
+      mobileNumber: '',
+      confirmPassword: ''
     }
   },
   methods: {
+    validate () {
+      var regname = /^[a-zA-Z]+ [a-zA-Z]+$/
+      var regUser = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/
+      var regpassword = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/
+      var regemail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+      var regmobile = /^\d{10}$/
+      var name = this.name
+      var userName = this.userName
+      var password = this.password
+      var confirmPassword = this.confirmPassword
+      var email = this.email
+      var mobileNumber = this.mobileNumber
+      if (regname.test(name) === false) {
+        alert('Write a FirstName and Last Name Seperated with space')
+      } else if (regUser.test(userName) === false) {
+        alert('Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters')
+      } else if (regpassword.test(password) === false) {
+        alert('Password must have atleast 8 characters, 1 lowercase,1 Capital Letter,1 number and 1 special character')
+      } else if (password !== confirmPassword) {
+        alert('Password donot Match')
+      } else if (regemail.test(email) === false) {
+        alert('Write Valid Email ex ramukaka@gmail.com')
+      } else if (regmobile.test(mobileNumber) === false) {
+        alert('Mobile numbers must have 10 digits')
+      }
+    },
     clicked () {
       const body = {
         userName: this.userName,
@@ -37,15 +64,12 @@ export default {
         mobileNumber: this.mobileNumber,
         password: this.password
       }
-      axios.post('http://10.177.68.55:8080/loginregister', body)
+      this.validate()
+      axios.post('http://10.177.68.80:9000/login-service/register', body)
         .then(response => {
           console.log(response)
+          this.$router.push('/')
         })
-      this.userName = ''
-      this.name = ''
-      this.email = ''
-      this.mobileNumber = ''
-      this.password = ''
     }
   },
   components: {

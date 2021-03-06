@@ -2,11 +2,11 @@
 <div>
   <navbar/>
  <div class="container">
-   <h1>Login to continue</h1>
+   <h1>Login to Continue</h1>
    <ol>
       <input type="text" placeholder="username" name="userName" class="a" required v-model="userName">
       <input type="password" placeholder="password" name="password" class="a" required v-model="password">
-      <button type="submit" class="b" name="login" @click="logIn">Login</button>
+      <button type="submit" class="b" name="login" @click="logIn" style="display: block; width: 9vw;margin-left: 155px;">Login</button>
    </ol>
  </div>
  </div>
@@ -30,18 +30,27 @@ export default {
   methods:
   {
     ...mapActions(['setLoginAction', 'setUserDataAction']),
+    validate () {
+      if (this.userName === null) {
+        alert('name should not be null')
+      } else if (this.password === null) {
+        alert('password never be null')
+      }
+    },
     logIn () {
       const body = {
         userName: this.userName,
         password: this.password
       }
-      axios.post('http://localhost:8082/login', body)
+      this.validate()
+      axios.post('http://10.177.68.80:9000/login-service/login', body)
         .then(response => {
           console.log(response)
           if (response.data.code === 'SUCCESS') {
             this.setLoginAction('true')
-            this.setUserDataAction(this.userName)
-            this.$router.push('/')
+            localStorage.setItem('username', this.userName)
+            localStorage.setItem('isLogin', 'true')
+            this.$router.push('/home')
           } else {
             alert('Password not matched')
           }
@@ -74,12 +83,12 @@ export default {
 .a {
   width:30vw;
   height:5vh;
-  margin: 5px;
+  margin: 10px;
   align-items: center;
 }
 .b {
-  width:5vw;
-  height:5vh;
+  width:50px;
+  height:20px;
   margin: 5px;
   align-items: center;
 
