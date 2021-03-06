@@ -5,11 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aadddec-c14f-4ceb-8d00-5024f9c799ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../airline-reservation-client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../airline-reservation-client/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../airline-reservation-client/src/views/addflights.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../airline-reservation-client/src/views/addflights.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../airline-reservation-client/src/views/payment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../airline-reservation-client/src/views/payment.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/controller/AddFlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/controller/AddFlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/controller/FlightSearchController.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightRequestDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/AddFlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/AddFlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/FlightRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/FlightResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/CompositeKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/CompositeKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/Flight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/FlightSeatClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/FlightTripType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/repository/AddFlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/repository/AddFlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/repository/FlightRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/service/FlightSearchService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/service/impl/AddFlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/service/impl/AddFlightServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/service/impl/FlightSearchServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +54,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.airlineregistrationsearch.entity" />
       <recent name="com.example.airlineregistrationsearch.service" />
     </key>
   </component>

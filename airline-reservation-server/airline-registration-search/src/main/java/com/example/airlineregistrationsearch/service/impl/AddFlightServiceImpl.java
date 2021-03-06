@@ -6,6 +6,7 @@ package com.example.airlineregistrationsearch.service.impl;
 import com.example.airlineregistrationsearch.dto.AddFlightRequestDTO;
 import com.example.airlineregistrationsearch.dto.AddFlightResponseDTO;
 import com.example.airlineregistrationsearch.entity.AddFlight;
+import com.example.airlineregistrationsearch.entity.CompositeKey;
 import com.example.airlineregistrationsearch.repository.AddFlightRepository;
 import com.example.airlineregistrationsearch.service.AddFlightService;
 import org.springframework.beans.BeanUtils;
@@ -23,6 +24,11 @@ public class AddFlightServiceImpl implements AddFlightService {
 
         //copy fields from dto to addFlight
         BeanUtils.copyProperties(addFlightRequestDTO, addFlight);
+        CompositeKey key = new CompositeKey();
+        key.setDate(addFlightRequestDTO.getFlightId().getDate());
+        key.setF_Id(addFlightRequestDTO.getFlightId().getF_Id());
+        addFlight.setFlightId(key);
+
 
         //save addFlight to db
         AddFlight savedAddFlight = addFlightRepository.save(addFlight);

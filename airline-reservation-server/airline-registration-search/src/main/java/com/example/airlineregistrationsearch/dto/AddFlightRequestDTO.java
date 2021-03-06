@@ -6,6 +6,7 @@ import com.example.airlineregistrationsearch.entity.CompositeKey;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.sql.Date;
 
 
 @Getter

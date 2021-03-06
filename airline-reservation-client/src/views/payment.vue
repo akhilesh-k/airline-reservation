@@ -43,7 +43,6 @@ export default {
 }
 input[type=text] {
   background-color: #ffffff;
-  color: white;
 }
 .btn {
   width:5vw;

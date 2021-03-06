@@ -73,7 +73,7 @@ export default {
   flex-direction: column;
 }
 .container {
-  height: 80vh;
+  height: 150vh;
   width: 40vw;
   background-color: #edeef7;
   display: flex;
@@ -83,19 +83,9 @@ export default {
   padding: 10px;
 
 }
-.title-container{
-  height: 15vh;
-  width: 50vw;
-  background-color: #edeef7;
-  display: flex;
-  margin-top:20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .a {
   width:30vw;
-  height:5vh;
+  height:10vh;
   margin: 5px;
   display: flex;
   border-radius: 8px;
@@ -107,7 +97,6 @@ export default {
   margin: 20px;
   display: flex;
   border: grey;
-  border-radius: 6px;
   background-color: #7868e6;
   align-items: center;
   color: white;
@@ -117,7 +106,7 @@ h1{
   display : block;
   text-align: center;
   color: rgb(51, 50, 50);
-  padding-bottom: 20px;
+  line-height: normal;
 }
 ::placeholder{
   padding: 10px;
