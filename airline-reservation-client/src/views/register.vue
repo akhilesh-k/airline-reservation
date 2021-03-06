@@ -3,7 +3,7 @@
 <div class="wrapper">
  <div class="container">
  <h1>Register to book the ticket.</h1>
-           <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
+      <input type="text" v-model="name" placeholder="Name" name="name" class="a" required>
       <input type="text" v-model="userName" placeholder="User name" name="userName" class="a" required>
       <input type="password" v-model="password" placeholder="Password" name="password" class="a" required>
       <!-- <input type="password" v-model="confirmPassword" placeholder="confirmPassword" name="confirmPassword" class="a" required> -->

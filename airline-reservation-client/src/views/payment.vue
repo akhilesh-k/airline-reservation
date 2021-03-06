@@ -1,6 +1,6 @@
 <template>
 <div><navbar/>
-<div class="wrapper">
+<div class="flex-container">
  <div class="container">
  <h1>Your flight ticket just a click away</h1>
  <input type="text" v-model="cardnumber" placeholder="Card Number" name="cardnumber" class="a" required>
@@ -26,12 +26,12 @@ export default {
 .body {
  margin:0;
 }
-.wrapper{
+.flex-container{
   display: flex;
   flex-direction: column;
 }
 .container {
-  height: 50vh;
+  height: 80vh;
   width: 40vw;
   background-color: #edeef7;
   display: flex;
@@ -63,5 +63,11 @@ input[type=text] {
 }
 ::placeholder{
   padding: 10px;
+}
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 </style>

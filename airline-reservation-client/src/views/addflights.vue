@@ -8,7 +8,7 @@
  <input type="text" v-model="departure" placeholder="Departure Time" name="departure" class="a" required>
  <input type="text" v-model="destination" placeholder="Destination" name="destination" class="a" required>
   <input type="text" v-model="source" placeholder="source" name="source" class="a" required>
- <input type="text" v-model="date" placeholder="Date" name="date" class="a" required>
+  <input type="text" v-model="date" placeholder="Date" name="date" class="a" required>
  <input type="number" v-model="price" placeholder="Price" name="price" class="a" required>
  <div class="btn">
  <button type="submit" class="btn" name="save" @click="clicked">Save</button>
@@ -46,7 +46,7 @@ export default {
         price: this.price,
         source: this.source
       }
-      axios.post('localhost:8080/flights', { body })
+      axios.post('localhost:8080/flights', body)
         .then(response => {
           console.log(response)
         })
@@ -66,12 +66,8 @@ export default {
 }
 </script>
 <style>
-.body {
- margin:0;
- display: flex;
-flex-direction: column;
-}
 .flex-container{
+  height: 150vh;
   display: flex;
   flex-direction: column;
 }
