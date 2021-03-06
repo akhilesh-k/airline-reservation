@@ -8,8 +8,8 @@ import java.util.Date;
 @Getter
 @Setter
 public class FlightResponseDTO {
-	private String Airline;
 	private String fId;
+	private String Airline;
 	private String source;
 	private String destination;
 	private String date;

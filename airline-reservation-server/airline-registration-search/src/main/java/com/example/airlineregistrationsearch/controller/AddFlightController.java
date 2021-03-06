@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/addflight")
+@CrossOrigin("*")
 public class AddFlightController {
     @Autowired
     private AddFlightService addFlightService;

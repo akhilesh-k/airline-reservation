@@ -5,33 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aadddec-c14f-4ceb-8d00-5024f9c799ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/controller/AddFlightController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/AddFlight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/repository/AddFlightRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/service/AddFlightService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/service/impl/AddFlightServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../airline-reservation-client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../airline-reservation-client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../airline-reservation-client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../airline-reservation-client/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/FlightBooking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/FlightBooking.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/FlightBookingApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/FlightBookingApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/controller/SignInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/controller/SignInController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserRequestDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserResponseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserSignInRequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserSignInRequestDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserSignInResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/dto/UserSignInResponseDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/entity/UserSignIn.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/entity/UserSignIn.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/repository/UserSignInRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/repository/UserSignInRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/UserSignInService.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/UserSignInService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/impl/UserSignInServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/classes/com/example/FlightBooking/service/impl/UserSignInServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/airline-registration-auth/target/test-classes/com/example/FlightBooking/FlightBookingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-auth/target/test-classes/com/example/FlightBooking/FlightBookingApplicationTests.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/CompositeKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../airline-reservation-client/src/views/addflight.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../airline-reservation-client/src/views/addflight.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/controller/AddFlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/controller/AddFlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/AddFlightResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/FlightResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/dto/FlightResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/AddFlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/entity/AddFlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/repository/AddFlightRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/java/com/example/airlineregistrationsearch/repository/AddFlightRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airline-registration-search/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/airline-registration-search/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +44,31 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.airlineregistrationsearch.service" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AirlineRegistrationSearchApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.airlineregistrationsearch.AirlineRegistrationSearchApplication" />
+      <module name="airline-registration-search" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.airlineregistrationsearch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AirlineRegistrationSearchApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

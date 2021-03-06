@@ -1,25 +1,29 @@
 package com.example.airlineregistrationsearch.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Date;
+import java.sql.Date;
 
-@Entity
+@Entity(name="flight")
 @Getter
 @Setter
 @Data
 public class AddFlight {
 
-    @Id
-    private Integer flightNo;
+    @EmbeddedId
+    private CompositeKey flightId;
     private String airline;
     private String source;
     private String destination;
+    private String arrivalTime;
+    private String departureTime;
     private Date date;
-    private String price;
+    private Integer price;
 
 }
