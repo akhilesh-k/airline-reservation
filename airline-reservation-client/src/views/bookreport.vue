@@ -41,7 +41,7 @@ export default {
   },
   mounted () {
     axios
-      .get('http://10.177.68.80:8080/search')
+      .get('http://10.177.68.80:8080/book')
       .then((response) => {
         console.log(response)
         this.info = response.data
