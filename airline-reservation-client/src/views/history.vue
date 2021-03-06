@@ -15,7 +15,7 @@
           <tr v-for="i in info" :key="i.id">
             <td>{{ i.name }}</td>
             <td>{{ i.userName }}</td>
-            <td>{{ i.flightName}}</td>
+            <td>{{ i.flightName }}</td>
             <td>{{ i.date }}</td>
             <td>{{ i.price }}</td>
             <td>{{ i.mobileNumber }}</td>
@@ -33,22 +33,21 @@ export default {
   name: 'history',
   data () {
     return {
-      info: {}
+      info: [],
+      x: ''
     }
   },
   components: {
     navabar1: navabar1
   },
-  mounted: {
-    load () {
-      var x = localStorage.getItem('username')
-      axios.get('http://10.177.68.80:9000/booking-details/getHistory/' + x).then((response) => {
-        this.info = response.data
-        console.log(response)
-      }).catch((response) => {
-        console.log(response)
-      })
-    }
+  mounted () {
+    this.x = localStorage.getItem('username')
+    axios.get('http://10.177.68.80:8085/history/getHistory/' + this.x).then((response) => {
+      this.info = response.data
+      console.log(response)
+    }).catch((response) => {
+      console.log(response)
+    })
   }
 }
 </script>

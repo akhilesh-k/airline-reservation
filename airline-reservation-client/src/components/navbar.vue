@@ -1,6 +1,6 @@
 <template>
 <div class="navigation">
-  <p ><router-link to="/home">FlightBooking</router-link></p>
+  <p >Qlinbay Travel</p>
  <ul>
  <li class="active"><router-link to="/">Login</router-link></li>
  <li class="active"><router-link to="/register">Register</router-link></li>
@@ -34,7 +34,7 @@ export default {
  overflow: hidden;
  background-color:#7868e6;
 }
-p a{
+p{
   color: white;
   font-weight: 700;
   text-decoration:none;

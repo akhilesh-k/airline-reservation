@@ -47,7 +47,7 @@ export default {
 
 <style scoped>
 .pay {
-  padding: 50px;
+  padding: 20px;
 }
 .heading {
   font-size: 48px;
@@ -78,6 +78,7 @@ export default {
   font-size: 24px;
   line-height: 28px;
   color: #454545;
+  margin-top:10px;
 }
 
 .airline-name {

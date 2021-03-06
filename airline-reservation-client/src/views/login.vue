@@ -6,7 +6,7 @@
    <ol>
       <input type="text" placeholder="username" name="userName" class="a" required v-model="userName">
       <input type="password" placeholder="password" name="password" class="a" required v-model="password">
-      <button type="submit" class="b" name="login" @click="logIn" style="display: block; width: 9vw;margin-left: 155px;">Login</button>
+      <button type="submit" class="b" name="login" @click="logIn" >Login</button>
    </ol>
  </div>
  </div>
@@ -33,8 +33,12 @@ export default {
     validate () {
       if (this.userName === null) {
         alert('name should not be null')
+        return 0
       } else if (this.password === null) {
         alert('password never be null')
+        return 0
+      } else {
+        return 1
       }
     },
     logIn () {
@@ -42,19 +46,20 @@ export default {
         userName: this.userName,
         password: this.password
       }
-      this.validate()
-      axios.post('http://10.177.68.80:9000/login-service/login', body)
-        .then(response => {
-          console.log(response)
-          if (response.data.code === 'SUCCESS') {
-            this.setLoginAction('true')
-            localStorage.setItem('username', this.userName)
-            localStorage.setItem('isLogin', 'true')
-            this.$router.push('/home')
-          } else {
-            alert('Password not matched')
-          }
-        }).catch(response => console.log(response))
+      if (this.validate() === 1) {
+        axios.post('http://10.177.68.80:9000/login-service/login', body)
+          .then(response => {
+            console.log(response)
+            if (response.data.code === 'SUCCESS') {
+              this.setLoginAction('true')
+              localStorage.setItem('username', this.userName)
+              localStorage.setItem('isLogin', 'true')
+              this.$router.push('/home')
+            } else {
+              alert('Password not matched')
+            }
+          }).catch(response => console.log(response))
+      }
     }
   },
   computed: {
@@ -70,7 +75,6 @@ export default {
 .container{
   height: 100vh;
   width: 100vw;
-  margin: 5px solid black;
   margin-left: auto;
   margin-top: 20px;
   margin-right:auto;
@@ -78,6 +82,8 @@ export default {
   flex-direction: column;
   justify-content: center;
   color: #7868e6;
+  align-items: center;
+  justify-content: center;
 
 }
 .a {
@@ -89,8 +95,6 @@ export default {
 .b {
   width:50px;
   height:20px;
-  margin: 5px;
-  align-items: center;
 
 }
 .container h1{

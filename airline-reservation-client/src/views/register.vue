@@ -124,6 +124,8 @@ export default {
   background-color: #7868e6;
   align-items: center;
   color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 h1{

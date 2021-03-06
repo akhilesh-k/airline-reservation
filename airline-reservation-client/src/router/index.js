@@ -9,6 +9,8 @@ import confirmation from '@/views/confirmation.vue'
 import adminLogin from '@/views/adminLogin.vue'
 import details from '@/views/details.vue'
 import history from '@/views/history.vue'
+import payment from '@/views/payment.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -57,6 +59,11 @@ const routes = [
     path: '/history',
     name: 'history',
     component: history
+  },
+  {
+    path: '/payment',
+    name: 'payment',
+    component: payment
   }
 ]
 

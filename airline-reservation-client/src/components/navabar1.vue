@@ -1,8 +1,9 @@
 <template>
 <div class="navigation">
-  <p ><router-link to="/home">FlightBooking</router-link></p>
+  <p >Qlinbay Travel</p>
  <ul>
  <li class="active"><router-link to="/">SignOut</router-link></li>
+ <li class="active"><router-link to="/history">Report List</router-link></li>
  </ul>
 </div>
 </template>
@@ -27,7 +28,7 @@ export default {
  overflow: hidden;
  background-color:#7868e6;
 }
-p a{
+p {
   color: white;
   font-weight: 700;
   text-decoration:none;
