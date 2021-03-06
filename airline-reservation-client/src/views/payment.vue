@@ -59,7 +59,6 @@ input[type=text] {
   display : block;
   text-align: center;
   color: rgb(51, 50, 50);
-  padding-bottom: 10px;
 }
 ::placeholder{
   padding: 10px;

@@ -8,7 +8,7 @@
  <input type="text" v-model="departure" placeholder="Departure Time" name="departure" class="a" required>
  <input type="text" v-model="destination" placeholder="Destination" name="destination" class="a" required>
   <input type="text" v-model="source" placeholder="source" name="source" class="a" required>
-  <input type="text" v-model="date" placeholder="Date" name="date" class="a" required>
+  <input type="date" v-model="date" placeholder="Date" name="date" class="a" required>
  <input type="number" v-model="price" placeholder="Price" name="price" class="a" required>
  <div class="btn">
  <button type="submit" class="btn" name="save" @click="clicked">Save</button>
