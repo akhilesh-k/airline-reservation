@@ -3,17 +3,18 @@
     <navabar1 />
     <div class="pay">
       <div class="card">
-        <div class="heading">Congratulations!! Ticked Booked</div>
+        <div class="heading">Payment Successful. Ticket Booked</div>
         <div class="content-line">
           <div class="personal-info">
-            <div class="name">XYZ AADMI</div>
-            <div class="name">+91-99XXXXX67</div>
-            <div class="name">xyz@mail.com</div>
+            <div class="name">{{passenger}}</div>
+            <div class="name">{{mobile}}</div>
+            <div class="name"></div>
           </div>
           <div class="Details">
-            <div class="airline-name">Some Airline</div>
-            <div class="from-where">BLR --> DEL</div>
-            <div class="timings">Day Month Year</div>
+            <div class="airline-name">{{item.airline}}</div>
+            <div class="from-where">{{item.source }}-->{{item.destination}}</div>
+            <div class="timings">{{item.flightId.date}}</div>
+            <div class="timings">{{item.arrival}} - {{item.departure}}</div>
           </div>
         </div>
       </div>
@@ -25,6 +26,13 @@
 import navabar1 from '@/components/navabar1.vue'
 
 export default {
+  data () {
+    return {
+      item: JSON.parse(localStorage.getItem('item')),
+      passenger: localStorage.getItem('Passenger'),
+      mobile: localStorage.getItem('Mobile')
+    }
+  },
   components: {
     navabar1: navabar1
   }
@@ -36,7 +44,7 @@ export default {
   padding: 50px;
 }
 .heading {
-  font-size: 48px;
+  font-size: 42px;
   color: #7868e6;
   text-align: center;
   font-weight: bold;
@@ -45,8 +53,8 @@ export default {
 .card {
   background: #edeef7;
   /* max-width:800px; */
-  margin: 80px auto;
-  padding: 50px;
+  margin: 50px auto;
+  padding: 30px;
 }
 
 .content-line {
@@ -58,12 +66,12 @@ export default {
 
 .from-where {
   font-weight: bold;
-  font-size: 48px;
+  font-size: 42px;
   color: #7868e6;
 }
 
 .timings {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 28px;
   color: #454545;
 }

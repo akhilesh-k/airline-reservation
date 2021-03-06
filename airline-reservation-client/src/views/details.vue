@@ -61,7 +61,8 @@ export default {
         f_id: this.detail.flightId.fid,
         date: this.detail.flightId.date
       }
-
+      localStorage.setItem('Passenger', this.name)
+      localStorage.setItem('Mobile', this.mobileNumber)
       if (this.validate() === 1) {
         axios.post('http://10.177.68.80:9000/booking-details/history', body)
           .then(response => {
@@ -69,7 +70,7 @@ export default {
           })
         axios.post('http://10.177.68.80:9000/booking-service/checkout', book)
           .then(response => console.log(response)).catch(response => console.log(response))
-        this.$router.push('/')
+        this.$router.push('/payment')
       }
     }
   }
