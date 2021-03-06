@@ -5,10 +5,10 @@ import com.example.airlineregistrationsearch.dto.AddFlightResponseDTO;
 import com.example.airlineregistrationsearch.service.AddFlightService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/flights")
-@CrossOrigin("*")
+
 public class AddFlightController {
     @Autowired
     private AddFlightService addFlightService;

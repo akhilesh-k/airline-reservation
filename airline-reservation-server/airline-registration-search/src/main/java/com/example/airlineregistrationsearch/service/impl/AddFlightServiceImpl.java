@@ -24,6 +24,7 @@ public class AddFlightServiceImpl implements AddFlightService {
 
         //copy fields from dto to addFlight
         BeanUtils.copyProperties(addFlightRequestDTO, addFlight);
+
         CompositeKey key = new CompositeKey();
         key.setDate(addFlightRequestDTO.getFlightId().getDate());
         key.setF_Id(addFlightRequestDTO.getFlightId().getF_Id());

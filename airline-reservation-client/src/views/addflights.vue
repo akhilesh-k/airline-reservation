@@ -1,62 +1,63 @@
 <template>
-<div><navbar/>
-<div class="wrapper">
+<div><navbar/><div class="flex-container">
  <div class="container">
  <h1>Add Flights</h1>
- <input type="text" v-model="flightNo" placeholder="Flight No" name="flightNo" class="a" required>
+ <input type="text" v-model="f_id" placeholder="Flight No" name="f_id" class="a" required>
  <input type="text" v-model="airline" placeholder="Airline" name="airline" class="a" required>
- <input type="text" v-model="source" placeholder="Source" name="source" class="a" required>
+ <input type="text" v-model="arrival" placeholder="Arrival Time" name="arrival" class="a" required>
+ <input type="text" v-model="departure" placeholder="Departure Time" name="departure" class="a" required>
  <input type="text" v-model="destination" placeholder="Destination" name="destination" class="a" required>
+  <input type="text" v-model="source" placeholder="source" name="source" class="a" required>
  <input type="text" v-model="date" placeholder="Date" name="date" class="a" required>
- <input type="text" v-model="arrivalTime" placeholder="Arrival Time" name="arrivalTime" class="a" required>
-  <input type="text" v-model="departureTime" placeholder="Departure Time" name="departureTime" class="a" required>
- <input type="text" v-model="price" placeholder="Price" name="price" class="a" required>
+ <input type="number" v-model="price" placeholder="Price" name="price" class="a" required>
  <div class="btn">
  <button type="submit" class="btn" name="save" @click="clicked">Save</button>
  </div>
  </div>
-</div>
+ </div>
 </div>
 </template>
 <script>
 import navbar from '../components/navbar.vue'
 import axios from 'axios'
 export default {
-  name: 'addflight',
+  name: 'addflights',
   data () {
     return {
-      flightNo: '',
-      airline: '',
-      source: '',
-      destination: '',
       date: '',
-      price: ''
+      f_id: '',
+      airline: '',
+      arrival: '',
+      departure: '',
+      destination: '',
+      price: '',
+      source: ''
     }
   },
   methods: {
     clicked () {
       const body = {
-        flightNo: this.flightNo,
-        airline: this.airline,
-        source: this.source,
-        destination: this.destination,
-        arrivalTime: this.arrivalTime,
-        departureTime: this.departureTime,
         date: this.date,
-        price: this.price
+        f_id: this.f_id,
+        airline: this.airline,
+        arrival: this.arrival,
+        departure: this.departure,
+        destination: this.destination,
+        price: this.price,
+        source: this.source
       }
       axios.post('localhost:8080/flights', { body })
         .then(response => {
           console.log(response)
         })
-      this.flightNo = ''
-      this.airline = ''
-      this.source = ''
-      this.destination = ''
-      this.arrivalTime = ''
-      this.departureTime = ''
       this.date = ''
+      this.f_id = ''
+      this.airline = ''
+      this.arrival = ''
+      this.departureTime = ''
+      this.destination = ''
       this.price = ''
+      this.source = ''
     }
   },
   components: {
@@ -67,8 +68,10 @@ export default {
 <style>
 .body {
  margin:0;
+ display: flex;
+flex-direction: column;
 }
-.wrapper{
+.flex-container{
   display: flex;
   flex-direction: column;
 }
@@ -107,8 +110,16 @@ h1{
   text-align: center;
   color: rgb(51, 50, 50);
   line-height: normal;
+  display: flex;
 }
 ::placeholder{
   padding: 10px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 1200px) {
+  .flex-container {
+    flex-direction: column;
+  }
 }
 </style>
