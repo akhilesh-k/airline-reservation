@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Date;
-import java.sql.Time;
 
 @Getter
 @Setter
@@ -19,6 +18,5 @@ public class AddFlightRequestDTO {
     private String destination;
     private String arrivalTime;
     private String departureTime;
-    private Date date;
     private Integer price;
 }

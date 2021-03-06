@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.sql.Date;
 
-@Entity(name="flight")
+@Entity(name="flights")
 @Getter
 @Setter
 @Data
@@ -23,7 +23,6 @@ public class AddFlight {
     private String destination;
     private String arrivalTime;
     private String departureTime;
-    private Date date;
     private Integer price;
 
 }
