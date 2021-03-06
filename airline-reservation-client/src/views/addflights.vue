@@ -10,7 +10,9 @@
  <input type="text" v-model="date" placeholder="Date" name="date" class="a" required>
  <input type="text" v-model="time" placeholder="Time" name="time" class="a" required>
  <input type="text" v-model="price" placeholder="Price" name="price" class="a" required>
- <button type="submit" class="b" name="save" @click="clicked">Save</button>
+ <div class="btn">
+ <button type="submit" class="btn" name="save" @click="clicked">Save</button>
+ </div>
  </div>
 </div>
 </div>
@@ -93,8 +95,8 @@ export default {
   border-radius: 8px;
   border: grey;
 }
-.b {
-  width:30vw;
+.btn {
+  width:5vw;
   height:5vh;
   margin: 20px;
   display: flex;
