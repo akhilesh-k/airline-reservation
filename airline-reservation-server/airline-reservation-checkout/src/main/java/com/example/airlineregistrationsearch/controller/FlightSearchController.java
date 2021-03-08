@@ -19,7 +19,7 @@ public class FlightSearchController {
 	public List<FlightResponseDTO> flightSearch(@PathVariable("source") String source, @PathVariable("destination") String destination,@PathVariable("date") String date,@PathVariable("fId") String fId) {
 		return flightSearchService.searchFlight(source,destination,date,fId);
 	}
-	@PostMapping
+	@PostMapping("/checkout")
 	public Integer updateFlightBooking(@RequestBody FlightRequestDTO flightRequestDTO){
 		return flightSearchService.updateFlightBooking(flightRequestDTO);
 	}

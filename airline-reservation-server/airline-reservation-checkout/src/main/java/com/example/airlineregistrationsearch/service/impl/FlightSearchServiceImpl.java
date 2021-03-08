@@ -40,7 +40,7 @@ public class FlightSearchServiceImpl implements FlightSearchService {
 			CompositeKey FlightId=new CompositeKey();
 			FlightId.setDate(flightRequestDTO.getDate());
 			FlightId.setFId(flightRequestDTO.getF_id());
-			if(f.getFlightId().getDate().equals(flightRequestDTO.getDate()) && f.getFlightId().getFId().equals(flightRequestDTO.getF_id())){
+			if(f.getFlightId().getDate().equals(flightRequestDTO.getDate()) && f.getFlightId().getFId().equals(flightRequestDTO.getF_id()) && f.getSeats()>0){
 				Integer seats =f.getSeats();
 				seats--;
 				f.setSeats(seats);
